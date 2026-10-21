@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Crema — Sunlit Roastery & European Bistro | Andheri East</title>
+<meta name="description" content="Café Crema, Saki Naka, Andheri East. 24-hour roastery and European bistro — single-estate coffee, wood-fired pizza, in-house patisserie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="announce">☀ Open 24 hours, every day · Follow <a href="https://www.instagram.com/cafecrema__/" target="_blank" rel="noopener">@cafecrema__</a> · Use code <b>CREMA10</b> for 10% off</div>
+<header class="head">
+  <a href="#top" class="logo">Café Crema<small>Roastery · Bistro · Andheri</small></a>
+  <nav id="links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#book">Book</a><a href="#find">Find Us</a></nav>
+  <div class="acts">
+    <button class="order-btn" id="orderBtn">Table Order (<span id="cnt">0</span>)</button>
+    <button class="admin-btn" id="adminBtn">Admin & Kitchen ↗</button>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <p class="kicker">Est. Saki Naka, Mumbai</p>
+    <h1>Slow mornings,<br><em>sunlit</em> plates.</h1>
+    <p>A European-style bistro and coffee roastery inside Hotel Peninsula Grand. Come for the brunch, stay for the cortado — at any hour of the day or night.</p>
+    <div class="cta"><a href="#menu" class="btn olive">See the Harvest Menu</a><a href="#book" class="btn line">Reserve</a></div>
+  </div>
+  <div class="hero-pic"><img src="hero_artisan.jpg" alt="Sunlit Café Crema dining room"><div class="stamp">Open<br><b>24/7</b></div></div>
+</section>
+
+<section class="pillars">
+  <div><span>☕</span><h4>Single Estate Beans</h4><p>Roasted for crema</p></div>
+  <div><span>🔥</span><h4>Wood-Fired Pizza</h4><p>Neapolitan style</p></div>
+  <div><span>🌙</span><h4>24/7 Dining</h4><p>Never closed</p></div>
+  <div><span>🍰</span><h4>In-house Patisserie</h4><p>Baked every day</p></div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="sec-head"><p class="kicker">The Harvest Menu</p><h2>From the bar & the oven</h2>
+  <p class="legend"><i class="dot veg"></i> Vegetarian <i class="dot nv"></i> Non-vegetarian</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="list" id="list"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-imgs"><img src="burrata_pizza.jpg" alt=""><img src="caramel_latte.jpg" alt=""></div>
+  <div><p class="kicker">Our Story</p><h2>A little piece of Europe at Sakinaka Junction.</h2>
+  <p>Café Crema began with one idea: Andheri deserved a café that feels like a long lunch in Lisbon, any time of day. We source single-estate Indian beans, ferment our pizza dough for 48 hours, and bake every dessert in-house.</p>
+  <blockquote>“The best cheesecake and cold coffee in Andheri — and it's open at 3am.”<cite>— A happy regular</cite></blockquote></div>
+</section>
+
+<section class="book" id="book">
+  <div class="book-l"><p class="kicker">Gatherings & Celebrations</p><h2>Book a table</h2><p>Birthdays, team lunches or a quiet date — tell us and we'll set the table.</p><img src="burnt_cheesecake.jpg" alt=""></div>
+  <form id="bookForm">
+    <label>Name<input name="name" required></label>
+    <label>Phone<input name="phone" required pattern="[0-9+ ]{10,14}"></label>
+    <label>Date<input type="date" name="date" required></label>
+    <label>Time<input type="time" name="time" required></label>
+    <label>Guests<select name="guests"><option>2</option><option>4</option><option>6</option><option>10+</option></select></label>
+    <label>Occasion<select name="occasion"><option>Casual</option><option>Birthday</option><option>Anniversary</option><option>Business</option></select></label>
+    <button class="btn olive">Request Booking</button>
+    <p class="note" id="bookMsg"></p>
+  </form>
+</section>
+
+<section class="gram"><p class="kicker">@cafecrema__ on Instagram</p>
+  <div class="gram-row"><img src="espresso_crema.jpg" alt=""><img src="truffle_pasta.jpg" alt=""><img src="biscoff_frappe.jpg" alt=""><img src="butter_chicken.jpg" alt=""><img src="crema_tiramisu.jpg" alt=""></div>
+</section>
+
+<footer id="find">
+  <div><h3>Café Crema</h3><p>1st Floor, Hotel Peninsula Grand, Sakinaka Junction, Lokmanya Tilak Nagar, Saki Naka, Andheri East, Mumbai 400072</p></div>
+  <div><h5>Hours</h5><p>Open 24 hours, 7 days</p><h5>Call</h5><p><a href="tel:+919930271349">+91 99302 71349</a> · <a href="tel:02228519191">022-2851 9191</a></p></div>
+  <iframe title="map" loading="lazy" src="https://maps.google.com/maps?q=Hotel%20Peninsula%20Grand%20Sakinaka&output=embed"></iframe>
+  <p class="copy">© 2026 Café Crema · Demo website</p>
+</footer>
+
+<!-- Order panel -->
+<aside class="panel" id="panel">
+  <div class="p-head"><h3>Table Order</h3><button class="x" data-close>✕</button></div>
+  <div class="p-items" id="pItems"></div>
+  <div class="p-foot">
+    <div class="promo"><input id="promo" placeholder="Promo code"><button id="applyPromo">Apply</button></div>
+    <p>Subtotal <span id="pSub">₹0</span></p><p>Discount <span id="pDisc">−₹0</span></p><p>GST 5% <span id="pGst">₹0</span></p>
+    <p class="big">Total <span id="pTot">₹0</span></p>
+    <input id="tbl" placeholder="Table number">
+    <button class="btn olive full" id="send">Send to Kitchen</button>
+  </div>
+</aside>
+<div class="shade" id="shade"></div>
+
+<!-- Admin -->
+<div class="modal" id="admin">
+  <div class="login" id="login">
+    <button class="x" data-closeadmin>✕</button>
+    <h3>Manager Login</h3><p class="hint">Demo: crema_manager / CremaAndheri@2026</p>
+    <form id="loginForm"><input id="u" placeholder="Username" required><input id="p" type="password" placeholder="Password" required><button class="btn olive full">Enter Kitchen</button></form>
+    <p class="err" id="err"></p>
+  </div>
+  <div class="kds" id="kds">
+    <div class="k-head"><h3>Kitchen Display · Café Crema</h3><div><span class="rev">Shift revenue: <b id="rev">₹0</b></span> <button class="btn line sm" id="demo">＋ Demo Order</button> <button class="btn line sm" id="out">Log out</button> <button class="x" data-closeadmin>✕</button></div></div>
+    <h4>Live Orders</h4><div class="cards" id="cards"></div>
+    <h4>Reservations</h4><div id="res"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
